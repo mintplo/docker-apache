@@ -18,7 +18,10 @@ ADD ansible /opt/ansible
 
 WORKDIR /opt/ansible
 
-RUN ansible-playbook site.yml
+RUN chmod +x ansible-build.sh
+
+# ansible playbook run
+RUN /bin/bash -c "/opt/ansible/ansible-build.sh"
 
 # storage location changed from container to host
 VOLUME ["/etc/apache2/", "/var/log/apache2/"]

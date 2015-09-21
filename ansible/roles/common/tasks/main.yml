@@ -1,9 +1,0 @@
----
-- name: default site configuration copy
-  template: src=default-site.conf dest=/etc/apache2/sites-available/default-site.conf
-
-- name: disable site
-  command: a2dissite 000-default
-
-- name: enable default-site
-  command: a2ensite default-site

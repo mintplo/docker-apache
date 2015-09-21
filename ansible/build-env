@@ -1,0 +1,2 @@
+# edit this variable if main playbook file name is modified.
+ANSIBLE_PLAYBOOK_FILE_NAME="site.yml"
